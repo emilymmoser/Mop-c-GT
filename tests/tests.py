@@ -30,7 +30,7 @@ nu = 150.0
 
 
 @pytest.mark.parametrize('use_mass_distribution', [True, False])
-def test_density(use_mass_distribution, write_data=True):
+def test_density(use_mass_distribution, write_data=False):
     """Test density projection
     """
     rho0 = np.log10(4e3 * (m / 1e14) ** 0.29 * (1 + z) ** (-0.66))
@@ -69,7 +69,7 @@ def test_density(use_mass_distribution, write_data=True):
 
 
 @pytest.mark.parametrize('use_mass_distribution', [True, False])
-def test_pressure(use_mass_distribution, write_data=True):
+def test_pressure(use_mass_distribution, write_data=False):
     """Test pressure projection
     """
     P0 = 18.1 * (m / 1e14) ** 0.154 * (1 + z) ** (-0.758)

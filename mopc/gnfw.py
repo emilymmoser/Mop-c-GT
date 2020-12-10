@@ -281,7 +281,7 @@ def Pth_gnfw1h(x, M, z, theta):
 
 
 def Pth_gnfw2h(xx, z, theta2h):
-    pth_file = np.genfromtxt("data/twohalo_cmass_average.txt")
+    pth_file = np.genfromtxt(mopc_datadir.joinpath("twohalo_cmass_average.txt"))
     x1 = pth_file[:, 0]
     pth2h = pth_file[:, 2]
     ans = np.interp(xx, x1, pth2h)
